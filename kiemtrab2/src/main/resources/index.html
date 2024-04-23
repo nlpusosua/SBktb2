@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+<h2>Danh sách Product</h2>
+<table border="1">
+    <thead>
+    <tr>
+        <th>id</th>
+        <th>name</th>
+        <th>description</th>
+        <th>thumbnail</th>
+        <th>price</th>
+        <th>rating</th>
+        <th>priceDiscount</th>
+        <th>review</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="product : ${pageData.getContent()}">
+        <td th:text="${product.id}">1</td>
+        <td th:text="${product.name}">Nguyễn Văn</td>
+        <td th:text="${product.description}">1</td>
+        <td th:text="${product.thumbnail}">Nguyễn Văn</td>
+        <td th:text="${product.price}">1</td>
+        <td th:text="${product.rating}">Nguyễn Văn</td>
+        <td th:text="${product.priceDiscount}">Nguyễn Văn</td>
+        <td th:text="${product.review.size()}">Nguyễn Văn</td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>

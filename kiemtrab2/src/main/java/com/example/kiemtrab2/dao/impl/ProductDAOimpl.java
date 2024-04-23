@@ -1,0 +1,19 @@
+package com.example.kiemtrab2.dao.impl;
+
+import com.example.kiemtrab2.dao.ProductDAO;
+import com.example.kiemtrab2.database.ProductDB;
+import com.example.kiemtrab2.model.Product;
+
+import java.util.List;
+
+public class ProductDAOimpl implements ProductDAO {
+    @Override
+    public void printListPeople(List<Product> products) {
+
+    }
+
+    @Override
+    public List<Product> getAll() {
+        return ProductDB.products;
+    }
+}
