@@ -5,9 +5,10 @@ import com.example.kiemtrab2.model.Product;
 import com.example.kiemtrab2.response.PageResponse;
 import com.example.kiemtrab2.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
-
+@Service
 public class ProductServiceimpl implements ProductService {
     @Autowired
     private ProductDAO productDAO;
